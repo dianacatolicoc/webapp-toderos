@@ -1,0 +1,385 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - ESTILOS GLOBALES (styles.css)
+   Proyecto Formativo ADSO - SENA
+   Tecnologías: HTML5 y CSS3 puro (sin frameworks ni librerías externas)
+   ========================================================================== */
+
+/* 1. VARIABLES CSS (CUSTOM PROPERTIES)
+   Tokens de diseño basados en el prototipo de Figma
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta de colores */
+  --color-primary: #194a9b;         /* Azul institucional principal */
+  --color-primary-hover: #133979;   /* Azul oscuro para hover */
+  --color-secondary: #f0f4fc;       /* Azul muy claro para fondos de acento */
+  --color-dark: #1e1e1e;            /* Texto principal oscuro */
+  --color-gray-dark: #4f4f4f;       /* Texto secundario oscuro */
+  --color-gray: #828282;            /* Texto secundario y placeholders */
+  --color-gray-light: #e0e0e0;      /* Bordes y divisores */
+  --color-gray-bg: #f5f6fa;         /* Fondo general de la aplicación */
+  --color-gray-box: #eeeeee;        /* Fondos neutros y cajas simuladas */
+  --color-white: #ffffff;           /* Fondo blanco para tarjetas y contenedores */
+  --color-success: #27ae60;         /* Estados activos y confirmaciones */
+  --color-warning: #f39c12;         /* Estados pendientes */
+  --color-danger: #e74c3c;          /* Estados inactivos o cancelados */
+
+  /* Tipografía */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-xs: 0.75rem;          /* 12px */
+  --font-size-sm: 0.875rem;         /* 14px */
+  --font-size-base: 1rem;           /* 16px */
+  --font-size-md: 1.125rem;         /* 18px */
+  --font-size-lg: 1.25rem;          /* 20px */
+  --font-size-xl: 1.5rem;           /* 24px */
+  --font-size-xxl: 1.875rem;        /* 30px */
+
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Bordes y sombras */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-full: 9999px;
+  --border-light: 1px solid var(--color-gray-light);
+  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --box-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Layout */
+  --max-width-mobile: 440px;
+  --max-width-desktop: 1200px;
+}
+
+/* 2. REINICIO BÁSICO (CSS RESET)
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-dark);
+  background-color: var(--color-gray-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. TIPOGRAFÍA Y ENLACES COMUNES
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-dark);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+p {
+  color: var(--color-gray-dark);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 4. ENCABEZADO Y LOGO DE APLICACIÓN
+   -------------------------------------------------------------------------- */
+.app-header {
+  background-color: var(--color-white);
+  border-bottom: var(--border-light);
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.5px;
+}
+
+/* Bloque neutro que simula el isotipo sin usar imágenes ni SVG */
+.brand-icon-placeholder {
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-dark);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-gray-box);
+}
+
+.back-link:hover {
+  background-color: var(--color-gray-light);
+  text-decoration: none;
+}
+
+/* 5. FORMULARIOS E INPUTS COMUNES
+   -------------------------------------------------------------------------- */
+.form-group {
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  border: var(--border-light);
+  border-radius: var(--border-radius-md);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(25, 74, 155, 0.15);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-gray);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+}
+
+/* 6. BOTONES COMUNES
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--color-gray-box);
+  color: var(--color-dark);
+  border-color: var(--color-gray-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-gray-light);
+  text-decoration: none;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: var(--font-size-xs);
+}
+
+/* 7. TARJETAS Y CONTENEDORES
+   -------------------------------------------------------------------------- */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  border: var(--border-light);
+  padding: var(--spacing-md);
+  box-shadow: var(--box-shadow-sm);
+}
+
+/* 8. BADGES Y ESTADOS
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-active {
+  background-color: #e8f8f0;
+  color: var(--color-success);
+}
+
+.badge-inactive {
+  background-color: #fceceb;
+  color: var(--color-danger);
+}
+
+.badge-pending {
+  background-color: #fef5e7;
+  color: var(--color-warning);
+}
+
+.badge-role {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* 9. PLACEHOLDERS NEUTROS (Imágenes, Avatares, Mapas)
+   Construidos exclusivamente con CSS3 para cumplir con las restricciones
+   -------------------------------------------------------------------------- */
+.avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-gray-box);
+  border: var(--border-light);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-gray);
+  text-transform: uppercase;
+}
+
+.map-placeholder {
+  background-color: #e9ecef;
+  border: 1px dashed var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-gray);
+  min-height: 160px;
+}
+
+.map-placeholder strong {
+  color: var(--color-dark);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* 10. BARRA DE NAVEGACIÓN INFERIOR (Mobile)
+   -------------------------------------------------------------------------- */
+.mobile-nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  border-top: var(--border-light);
+  display: flex;
+  justify-content: space-around;
+  padding: var(--spacing-sm) 0;
+  z-index: 100;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  padding: 4px 8px;
+}
+
+.mobile-nav-item.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.nav-icon-box {
+  width: 22px;
+  height: 22px;
+  background-color: var(--color-gray-box);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.mobile-nav-item.active .nav-icon-box {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Espaciador inferior para no tapar contenido con la barra móvil */
+.has-bottom-nav {
+  padding-bottom: 70px;
+}

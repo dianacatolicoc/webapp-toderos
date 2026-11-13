@@ -1,0 +1,11 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - SOLICITAR SERVICIO (solicitar-servicio.css)
+   Estilos específicos para la pantalla de formulario de solicitud
+   ========================================================================== */
+
+.request-container {
+  max-width: var(--max-width-mobile);
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--color-gray-bg);
+}

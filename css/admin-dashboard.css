@@ -1,0 +1,10 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - DASHBOARD DE ADMINISTRACIÓN (admin-dashboard.css)
+   Estilos específicos para el panel de métricas y resumen general
+   ========================================================================== */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-gray-bg);
+}

@@ -1,0 +1,10 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - GESTIÓN DE USUARIOS (admin-usuarios.css)
+   Estilos específicos para la tabla de administración de usuarios
+   ========================================================================== */
+
+.admin-users-view {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-gray-bg);
+}

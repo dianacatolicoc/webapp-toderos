@@ -1,0 +1,11 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - MIS SERVICIOS (mis-servicios.css)
+   Estilos específicos para la pantalla de servicios del prestador
+   ========================================================================== */
+
+.provider-container {
+  max-width: var(--max-width-mobile);
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--color-gray-bg);
+}
