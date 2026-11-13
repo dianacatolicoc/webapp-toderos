@@ -4,93 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar Sesión - Toderos Facatativá</title>
-  <!-- Estilos globales compartidos -->
+  <!-- Estilos globales -->
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Estilos específicos de la pantalla -->
+  <!-- Estilos de pantalla -->
   <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="login-page">
+<body>
 
-  <main class="auth-card" aria-labelledby="login-title">
+  <!-- Contenedor principal de la pantalla móvil -->
+  <main class="mobile-view">
     
-    <!-- Encabezado con identidad visual -->
-    <header class="auth-header">
-      <div class="auth-brand">
-        <div class="brand-badge-box" aria-hidden="true">TF</div>
-        <h1 class="brand-title">TODEROS APP</h1>
-      </div>
-      <h2 id="login-title" class="auth-title">Iniciar Sesión</h2>
-      <p class="auth-subtitle">Ingresa tus credenciales para acceder a tu cuenta en Facatativá</p>
+    <!-- Encabezado con logo y título -->
+    <header class="site-header">
+      <div class="login-brand-logo">[Logo]</div>
+      <h1 class="brand-name">TODEROS APP</h1>
+      <h2>Iniciar Sesión</h2>
+      <p>Ingresa tus datos para acceder a la plataforma</p>
     </header>
 
     <!-- Formulario de inicio de sesión -->
-    <form class="auth-form" action="buscar-servicios.html" method="get">
+    <form action="buscar-servicios.html" method="get" class="login-box">
       
-      <!-- Campo Correo -->
       <div class="form-group">
-        <label for="login-email" class="form-label">Correo electrónico</label>
-        <div class="input-with-indicator">
-          <span class="input-indicator" aria-hidden="true">@</span>
-          <input 
-            type="email" 
-            id="login-email" 
-            name="email" 
-            class="form-input" 
-            placeholder="ejemplo@correo.com" 
-            required
-            autocomplete="email">
-        </div>
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
       </div>
 
-      <!-- Campo Contraseña -->
       <div class="form-group">
-        <label for="login-password" class="form-label">Contraseña</label>
-        <div class="input-with-indicator">
-          <span class="input-indicator" aria-hidden="true">**</span>
-          <input 
-            type="password" 
-            id="login-password" 
-            name="password" 
-            class="form-input" 
-            placeholder="Ingresa tu contraseña" 
-            required
-            autocomplete="current-password">
-        </div>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
       </div>
 
-      <!-- Botón de acción principal -->
-      <button type="submit" class="btn btn-primary btn-block">
-        Iniciar Sesión
-      </button>
-
-      <!-- Divisor visual -->
-      <div class="auth-divider" aria-hidden="true">
-        <span class="divider-line"></span>
-        <span class="divider-text">o</span>
-        <span class="divider-line"></span>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
       </div>
 
-      <!-- Botón de autenticación alternativa -->
-      <a href="buscar-servicios.html" class="btn-social">
-        <span class="social-indicator" aria-hidden="true">[G]</span>
-        <span>Continuar con Google</span>
-      </a>
+      <div class="divider-simple">
+        <span>o</span>
+      </div>
+
+      <div class="form-group">
+        <a href="buscar-servicios.html" class="btn btn-secondary btn-block">Continuar con Google</a>
+      </div>
 
     </form>
 
-    <!-- Enlaces secundarios del pie -->
-    <footer class="auth-footer">
-      <p>
-        ¿Olvidaste tu <a href="#recuperar">contraseña?</a>
-      </p>
-      <p>
-        ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
-      </p>
-
-      <!-- Enlace para navegación rápida hacia el rol Administrador (para fines de revisión) -->
-      <div class="admin-access-note">
-        <span>¿Eres administrador?</span> 
-        <a href="admin-dashboard.html">Ir al panel de administración</a>
+    <!-- Enlaces de navegación -->
+    <footer class="login-footer-links">
+      <p><a href="#recuperar">¿Olvidaste tu contraseña?</a></p>
+      <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+      
+      <div class="admin-link-box">
+        <p>Acceso administrativo: <a href="admin-dashboard.html">Panel de Administración</a></p>
       </div>
     </footer>
 
