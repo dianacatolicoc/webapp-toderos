@@ -1,0 +1,91 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - SOLICITAR SERVICIO (solicitar-servicio.css)
+   Formulario para que el cliente detalle y envíe su solicitud
+   ========================================================================== */
+
+.request-top-nav {
+  margin-bottom: 15px;
+}
+
+/* Caja de resumen del prestador */
+.provider-summary-box {
+  background-color: var(--color-neutral-box);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.provider-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.provider-summary-avatar {
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--color-muted);
+}
+
+.provider-summary-details h3 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.provider-summary-details p {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
+.provider-summary-meta {
+  font-size: 12px;
+  color: #444444;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Formulario de solicitud */
+.request-form-card {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.request-form-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 8px;
+}
+
+.form-row-dates {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row-dates .form-group {
+  flex: 1;
+}
+
+.request-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}

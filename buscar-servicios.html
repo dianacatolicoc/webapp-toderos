@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Servicios - Toderos Facatativá</title>
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Estilos de pantalla -->
+  <link rel="stylesheet" href="css/buscar-servicios.css">
+</head>
+<body>
+
+  <!-- Vista móvil del cliente -->
+  <main class="mobile-view">
+    
+    <!-- Barra superior de estado / usuario -->
+    <header class="client-top-bar">
+      <div>
+        <span>Ubicación: <strong>Facatativá, Cundinamarca</strong></span>
+      </div>
+      <div>
+        <span class="user-role-badge">Rol: Cliente</span>
+      </div>
+    </header>
+
+    <!-- Encabezado de marca -->
+    <div class="site-header">
+      <div class="brand-logo-box">TF</div>
+      <h1 class="brand-name">TODEROS APP</h1>
+      <p>Encuentra técnicos y servicios domésticos de confianza</p>
+    </div>
+
+    <!-- Buscador -->
+    <section class="search-form">
+      <form action="buscar-servicios.html" method="get">
+        <div class="search-input-group">
+          <input type="text" name="q" placeholder="¿Qué servicio necesitas? (ej. plomero, pintor...)" value="Plomería">
+          <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Filtros rápidos por oficio -->
+    <nav class="category-filter-list" aria-label="Categorías">
+      <a href="#todos" class="category-tag active">Todos</a>
+      <a href="#plomeria" class="category-tag">Plomería</a>
+      <a href="#electricidad" class="category-tag">Electricidad</a>
+      <a href="#pintura" class="category-tag">Pintura</a>
+      <a href="#carpinteria" class="category-tag">Carpintería</a>
+      <a href="#aseo" class="category-tag">Aseo doméstico</a>
+    </nav>
+
+    <!-- Espacio representativo del mapa (Wireframe) -->
+    <section class="map-wireframe-box" aria-label="Mapa de prestadores">
+      <strong>[Área de Mapa - Cobertura Facatativá]</strong>
+      <p>Representación de prestadores disponibles cerca de tu ubicación actual</p>
+      <span class="badge-tag">Radio: 5 km a la redonda</span>
+    </section>
+
+    <!-- Catálogo de prestadores disponibles -->
+    <section aria-labelledby="servicios-titulo">
+      <h2 id="servicios-titulo" class="services-section-title">Prestadores destacados en Facatativá</h2>
+
+      <div class="service-card-list">
+        
+        <!-- Tarjeta 1 -->
+        <article class="service-item-card">
+          <div class="service-card-header">
+            <div class="avatar-neutral" aria-hidden="true">[Foto]</div>
+            <div class="service-card-info">
+              <h3>Fontanería y Reparaciones Sanitarias</h3>
+              <p class="service-todero-name">Prestador: Roberto Gómez</p>
+              <p class="service-location">Sector: Barrio Santa Rita, Facatativá</p>
+            </div>
+          </div>
+          <p class="service-rating">Calificación: 4.9 / 5.0 (28 servicios realizados)</p>
+          <div class="service-card-footer">
+            <span class="service-price">Desde $35.000 COP</span>
+            <a href="solicitar-servicio.html" class="btn btn-primary">Solicitar Servicio</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="service-item-card">
+          <div class="service-card-header">
+            <div class="avatar-neutral" aria-hidden="true">[Foto]</div>
+            <div class="service-card-info">
+              <h3>Instalaciones y Mantenimiento Eléctrico</h3>
+              <p class="service-todero-name">Prestador: Carlos Mendoza</p>
+              <p class="service-location">Sector: Barrio Las Quintas, Facatativá</p>
+            </div>
+          </div>
+          <p class="service-rating">Calificación: 4.7 / 5.0 (19 servicios realizados)</p>
+          <div class="service-card-footer">
+            <span class="service-price">Desde $40.000 COP</span>
+            <a href="solicitar-servicio.html" class="btn btn-primary">Solicitar Servicio</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="service-item-card">
+          <div class="service-card-header">
+            <div class="avatar-neutral" aria-hidden="true">[Foto]</div>
+            <div class="service-card-info">
+              <h3>Pintura de Interiores y Fachadas</h3>
+              <p class="service-todero-name">Prestador: Wilson Moreno</p>
+              <p class="service-location">Sector: Centro, Facatativá</p>
+            </div>
+          </div>
+          <p class="service-rating">Calificación: 4.8 / 5.0 (15 servicios realizados)</p>
+          <div class="service-card-footer">
+            <span class="service-price">Desde $50.000 COP</span>
+            <a href="solicitar-servicio.html" class="btn btn-primary">Solicitar Servicio</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Barra de navegación básica inferior -->
+    <nav class="nav-bar-basic" aria-label="Navegación principal">
+      <a href="buscar-servicios.html" class="active">Buscar</a>
+      <a href="solicitar-servicio.html">Solicitud</a>
+      <a href="mis-servicios.html">Vista Todero</a>
+      <a href="index.html">Salir</a>
+    </nav>
+
+  </main>
+
+</body>
+</html>

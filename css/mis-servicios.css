@@ -1,0 +1,149 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - MIS SERVICIOS (mis-servicios.css)
+   Vista del Prestador (Todero) para administrar sus servicios publicados
+   ========================================================================== */
+
+/* Barra de perfil del todero */
+.todero-profile-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.profile-summary-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar-small {
+  width: 34px;
+  height: 34px;
+  background-color: var(--color-neutral-box);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--color-muted);
+}
+
+/* Métricas rápidas del prestador */
+.provider-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  background-color: var(--color-neutral-box);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+/* Sección para publicar nuevo servicio */
+.add-service-section {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.add-service-section h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+}
+
+/* Listado de servicios del prestador */
+.my-services-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.provider-service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.provider-service-item {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 12px;
+}
+
+.provider-service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.provider-service-header h4 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.status-active {
+  background-color: #e8f8f0;
+  color: #27ae60;
+  border: 1px solid #a3e9c1;
+}
+
+.status-inactive {
+  background-color: #fceceb;
+  color: #e74c3c;
+  border: 1px solid #f5b7b1;
+}
+
+.provider-service-body {
+  font-size: 13px;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.provider-service-body p {
+  margin-bottom: 4px;
+}
+
+.provider-service-actions {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 8px;
+}

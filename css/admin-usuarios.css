@@ -1,0 +1,145 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - GESTIÓN DE USUARIOS (admin-usuarios.css)
+   Tabla de gestión, filtros y administración de cuentas de usuario
+   ========================================================================== */
+
+/* Barra de filtros y búsqueda */
+.users-filter-card {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-neutral-box);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-input-wrap {
+  flex: 2;
+  min-width: 220px;
+}
+
+.filter-select-wrap {
+  flex: 1;
+  min-width: 140px;
+}
+
+.filter-btn-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+/* Badges específicos para roles en la tabla */
+.role-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.role-client {
+  background-color: #eaf2f8;
+  color: #2980b9;
+  border: 1px solid #aed6f1;
+}
+
+.role-todero {
+  background-color: #fef9e7;
+  color: #b7950b;
+  border: 1px solid #f9e79f;
+}
+
+.role-admin {
+  background-color: #ebedef;
+  color: #2c3e50;
+  border: 1px solid #d5d8dc;
+}
+
+/* Contenedor de tabla de usuarios */
+.users-table-container {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.users-table th,
+.users-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.users-table th {
+  background-color: var(--color-neutral-box);
+  font-weight: bold;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.users-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.table-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-table-action {
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: normal;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+/* Paginación básica */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eeeeee;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.page-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  color: var(--color-text);
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.page-btn.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}

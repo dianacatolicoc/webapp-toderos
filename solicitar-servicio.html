@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Servicio - Toderos Facatativá</title>
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Estilos de pantalla -->
+  <link rel="stylesheet" href="css/solicitar-servicio.css">
+</head>
+<body>
+
+  <!-- Vista móvil del cliente -->
+  <main class="mobile-view">
+    
+    <!-- Enlace superior para volver -->
+    <div class="request-top-nav">
+      <a href="buscar-servicios.html">&larr; Volver a buscar servicios</a>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="site-header">
+      <div class="brand-logo-box">TF</div>
+      <h1 class="brand-name">TODEROS APP</h1>
+      <h2>Solicitar Servicio</h2>
+      <p>Diligencia la información para coordinar la visita técnica</p>
+    </header>
+
+    <!-- Resumen del prestador seleccionado -->
+    <section class="provider-summary-box" aria-label="Prestador seleccionado">
+      <div class="provider-summary-header">
+        <div class="provider-summary-avatar" aria-hidden="true">[Foto]</div>
+        <div class="provider-summary-details">
+          <h3>Roberto Gómez</h3>
+          <p>Especialidad: Fontanería y Reparaciones</p>
+        </div>
+      </div>
+      <div class="provider-summary-meta">
+        <span>Sector: Barrio Santa Rita, Facatativá</span>
+        <span>Tarifa base: $35.000 COP</span>
+      </div>
+    </section>
+
+    <!-- Formulario de solicitud -->
+    <section class="request-form-card">
+      <h3 class="request-form-title">Detalles de la Solicitud</h3>
+
+      <form action="buscar-servicios.html" method="get">
+        
+        <div class="form-group">
+          <label for="tipo-servicio">Tipo de servicio:</label>
+          <select id="tipo-servicio" name="tipo_servicio" required>
+            <option value="fontaneria">Fontanería / Reparación de fugas</option>
+            <option value="instalacion">Instalación de grifería y sanitarios</option>
+            <option value="mantenimiento">Mantenimiento preventivo de tuberías</option>
+            <option value="otro">Otro requerimiento técnico</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción del trabajo a realizar:</label>
+          <textarea 
+            id="descripcion" 
+            name="descripcion" 
+            placeholder="Describe brevemente el daño o lo que necesitas que el todero repare..." 
+            required></textarea>
+        </div>
+
+        <div class="form-row-dates">
+          <div class="form-group">
+            <label for="fecha">Fecha sugerida:</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora aproximada:</label>
+            <input type="time" id="hora" name="hora" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="direccion">Dirección en Facatativá:</label>
+          <input 
+            type="text" 
+            id="direccion" 
+            name="direccion" 
+            placeholder="Ej. Carrera 5 # 10-25" 
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="barrio">Barrio / Punto de referencia:</label>
+          <input 
+            type="text" 
+            id="barrio" 
+            name="barrio" 
+            placeholder="Ej. Barrio Santa Rita, casa esquinera">
+        </div>
+
+        <div class="request-actions">
+          <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+          <a href="buscar-servicios.html" class="btn btn-secondary btn-block">Cancelar y Volver</a>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- Barra de navegación básica inferior -->
+    <nav class="nav-bar-basic" aria-label="Navegación principal">
+      <a href="buscar-servicios.html">Buscar</a>
+      <a href="solicitar-servicio.html" class="active">Solicitud</a>
+      <a href="mis-servicios.html">Vista Todero</a>
+      <a href="index.html">Salir</a>
+    </nav>
+
+  </main>
+
+</body>
+</html>

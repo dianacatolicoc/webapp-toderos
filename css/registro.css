@@ -1,0 +1,46 @@
+/* ==========================================================================
+   TODEROS FACATATIVÁ - REGISTRO BÁSICO (registro.css)
+   ========================================================================== */
+
+.register-top-nav {
+  margin-bottom: 15px;
+}
+
+.role-selection {
+  background-color: var(--color-neutral-box);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.role-selection legend {
+  font-weight: bold;
+  font-size: 13px;
+  padding: 0 5px;
+}
+
+.role-radios {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.role-radios label {
+  cursor: pointer;
+}
+
+.terms-checkbox-box {
+  margin: 15px 0;
+  font-size: 13px;
+}
+
+.terms-checkbox-box input {
+  margin-right: 6px;
+}
+
+.register-footer-links {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}

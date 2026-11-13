@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Servicios - Toderos Facatativá</title>
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Estilos de pantalla -->
+  <link rel="stylesheet" href="css/mis-servicios.css">
+</head>
+<body>
+
+  <!-- Vista móvil del todero / prestador -->
+  <main class="mobile-view">
+    
+    <!-- Barra superior con perfil del todero -->
+    <header class="todero-profile-bar">
+      <div class="profile-summary-info">
+        <div class="profile-avatar-small" aria-hidden="true">[Foto]</div>
+        <div>
+          <strong>Roberto Gómez</strong>
+          <span class="badge-tag">Prestador (Todero)</span>
+        </div>
+      </div>
+      <div>
+        <span>Calificación: 4.9 / 5.0</span>
+      </div>
+    </header>
+
+    <!-- Encabezado de la pantalla -->
+    <div class="site-header">
+      <div class="brand-logo-box">TF</div>
+      <h1 class="brand-name">TODEROS APP</h1>
+      <h2>Gestión de Mis Servicios</h2>
+      <p>Administra los oficios que tienes disponibles para contratación en Facatativá</p>
+    </div>
+
+    <!-- Resumen numérico / Estadísticas básicas -->
+    <section class="provider-stats-grid" aria-label="Resumen de actividad">
+      <div class="stat-box">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Servicios Activos</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Solicitudes Recibidas</span>
+      </div>
+    </section>
+
+    <!-- Sección: Publicar nuevo servicio -->
+    <section class="add-service-section">
+      <h3>+ Publicar Nuevo Servicio</h3>
+      
+      <form action="mis-servicios.html" method="get">
+        
+        <div class="form-group">
+          <label for="titulo-servicio">Nombre del servicio:</label>
+          <input 
+            type="text" 
+            id="titulo-servicio" 
+            name="titulo" 
+            placeholder="Ej. Reparación de techos y tejas" 
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoría u oficio:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="plomeria">Plomería y Fontanería</option>
+            <option value="electricidad">Electricidad residencial</option>
+            <option value="pintura">Pintura y acabados</option>
+            <option value="carpinteria">Carpintería</option>
+            <option value="otro">Mantenimiento general</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tarifa">Tarifa base aproximada (COP):</label>
+          <input 
+            type="text" 
+            id="tarifa" 
+            name="tarifa" 
+            placeholder="Ej. $35.000 por hora o visita" 
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion-servicio">Descripción de lo que incluye:</label>
+          <textarea 
+            id="descripcion-servicio" 
+            name="descripcion" 
+            placeholder="Indica herramientas que utilizas, cobertura en barrios de Facatativá y garantía del trabajo..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Guardar y Publicar Servicio</button>
+
+      </form>
+    </section>
+
+    <!-- Sección: Listado de servicios publicados -->
+    <section aria-labelledby="mis-servicios-lista">
+      <h3 id="mis-servicios-lista" class="my-services-title">Servicios que Ofreces Actualmente</h3>
+
+      <div class="provider-service-list">
+        
+        <!-- Servicio 1 -->
+        <article class="provider-service-item">
+          <div class="provider-service-header">
+            <div>
+              <h4>Fontanería y Reparaciones Sanitarias</h4>
+              <span class="badge-tag">Plomería</span>
+            </div>
+            <span class="status-badge status-active">Activo</span>
+          </div>
+          <div class="provider-service-body">
+            <p><strong>Tarifa:</strong> $35.000 COP / visita técnica</p>
+            <p><strong>Cobertura:</strong> Toda el área urbana de Facatativá</p>
+            <p><strong>Solicitudes acumuladas:</strong> 28 contrataciones</p>
+          </div>
+          <div class="provider-service-actions">
+            <a href="#editar" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">Editar</a>
+            <a href="#desactivar" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">Desactivar</a>
+          </div>
+        </article>
+
+        <!-- Servicio 2 -->
+        <article class="provider-service-item">
+          <div class="provider-service-header">
+            <div>
+              <h4>Instalación de Grifería y Lavamanos</h4>
+              <span class="badge-tag">Plomería</span>
+            </div>
+            <span class="status-badge status-active">Activo</span>
+          </div>
+          <div class="provider-service-body">
+            <p><strong>Tarifa:</strong> $40.000 COP</p>
+            <p><strong>Cobertura:</strong> Santa Rita, Centro, Quintas y Manablanca</p>
+            <p><strong>Solicitudes acumuladas:</strong> 14 contrataciones</p>
+          </div>
+          <div class="provider-service-actions">
+            <a href="#editar" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">Editar</a>
+            <a href="#desactivar" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">Desactivar</a>
+          </div>
+        </article>
+
+        <!-- Servicio 3 (Inactivo de ejemplo) -->
+        <article class="provider-service-item">
+          <div class="provider-service-header">
+            <div>
+              <h4>Impermeabilización de Terrazas</h4>
+              <span class="badge-tag">Mantenimiento</span>
+            </div>
+            <span class="status-badge status-inactive">Inactivo</span>
+          </div>
+          <div class="provider-service-body">
+            <p><strong>Tarifa:</strong> A convenir según metraje</p>
+            <p><strong>Estado:</strong> Servicio pausado temporalmente</p>
+          </div>
+          <div class="provider-service-actions">
+            <a href="#editar" class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;">Editar</a>
+            <a href="#activar" class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;">Activar</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="nav-bar-basic" aria-label="Navegación prestador">
+      <a href="buscar-servicios.html">Buscar</a>
+      <a href="mis-servicios.html" class="active">Mis Servicios</a>
+      <a href="solicitar-servicio.html">Solicitud</a>
+      <a href="index.html">Salir</a>
+    </nav>
+
+  </main>
+
+</body>
+</html>
