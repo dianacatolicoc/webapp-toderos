@@ -131,3 +131,4 @@ El proyecto fue gestionado con Git en la rama `feature/maquetacion-html-css`, co
 * `feat: maquetar pantalla de mis servicios`
 * `feat: maquetar panel y gestion de usuarios`
 * `docs: documentar proyecto y forma de ejecucion`
+
