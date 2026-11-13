@@ -4,14 +4,228 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestión de Usuarios - Toderos Facatativá</title>
-  <!-- Estilos globales compartidos -->
+  <!-- Estilos globales -->
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Estilos específicos de la pantalla -->
+  <!-- Estilos de pantalla -->
   <link rel="stylesheet" href="css/admin-usuarios.css">
 </head>
 <body>
-  <div class="admin-users-view">
-    <!-- Contenido inicial de Gestión de Usuarios -->
+
+  <!-- Layout del panel administrativo -->
+  <div class="admin-layout">
+
+    <!-- Barra lateral de navegación (Sidebar) -->
+    <aside class="admin-sidebar">
+      
+      <div class="admin-sidebar-header">
+        <div class="brand-logo-box">TF</div>
+        <h2 class="brand-name" style="font-size: 17px; margin-bottom: 2px;">TODEROS APP</h2>
+        <span class="badge-tag">Panel Administrador</span>
+      </div>
+
+      <nav aria-label="Menú de administración">
+        <ul class="admin-nav-links">
+          <li><a href="admin-dashboard.html">Dashboard / Resumen</a></li>
+          <li><a href="admin-usuarios.html" class="active">Gestión de Usuarios</a></li>
+          <li><a href="#servicios">Gestión de Servicios</a></li>
+          <li><a href="#solicitudes">Gestión de Solicitudes</a></li>
+          <li><a href="#reportes">Reportes y Métricas</a></li>
+          <li><a href="#configuracion">Configuración</a></li>
+        </ul>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <p><strong>Sesión:</strong> Diana Católico</p>
+        <p style="font-size: 11px; color: var(--color-muted); margin-bottom: 8px;">Administradora del Sistema</p>
+        <p><a href="index.html">&larr; Volver a la WebApp</a></p>
+      </div>
+
+    </aside>
+
+    <!-- Contenido principal: Gestión de Usuarios -->
+    <main class="admin-content">
+
+      <!-- Barra superior con título y acción principal -->
+      <header class="admin-header-bar">
+        <div>
+          <h1 style="font-size: 22px; margin-bottom: 2px;">Gestión de Usuarios</h1>
+          <p style="margin-bottom: 0; font-size: 13px;">Consulta, filtrado y administración de cuentas registradas en Facatativá</p>
+        </div>
+        <div>
+          <a href="#nuevo-usuario" class="btn btn-primary" style="font-size: 13px;">+ Registrar Usuario</a>
+        </div>
+      </header>
+
+      <!-- Tarjeta de filtros y búsqueda -->
+      <section class="users-filter-card" aria-label="Filtros de búsqueda">
+        <form action="admin-usuarios.html" method="get" class="filter-form">
+          
+          <div class="filter-input-wrap form-group" style="margin-bottom: 0;">
+            <label for="buscar-usuario">Buscar usuario:</label>
+            <input 
+              type="text" 
+              id="buscar-usuario" 
+              name="q" 
+              placeholder="Buscar por nombre, correo o teléfono...">
+          </div>
+
+          <div class="filter-select-wrap form-group" style="margin-bottom: 0;">
+            <label for="filtro-rol">Filtrar por rol:</label>
+            <select id="filtro-rol" name="rol">
+              <option value="">Todos los roles</option>
+              <option value="cliente">Cliente</option>
+              <option value="todero">Todero (Prestador)</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+
+          <div class="filter-select-wrap form-group" style="margin-bottom: 0;">
+            <label for="filtro-estado">Filtrar por estado:</label>
+            <select id="filtro-estado" name="estado">
+              <option value="">Todos los estados</option>
+              <option value="activo">Activo</option>
+              <option value="inactivo">Inactivo</option>
+            </select>
+          </div>
+
+          <div class="filter-btn-wrap">
+            <button type="submit" class="btn btn-primary" style="padding: 8px 14px; font-size: 13px;">Filtrar</button>
+            <a href="admin-usuarios.html" class="btn btn-secondary" style="padding: 8px 14px; font-size: 13px;">Limpiar</a>
+          </div>
+
+        </form>
+      </section>
+
+      <!-- Tabla de usuarios -->
+      <section class="users-table-container" aria-label="Listado de usuarios">
+        
+        <div class="table-responsive">
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Rol</th>
+                <th>Correo electrónico</th>
+                <th>Teléfono</th>
+                <th>Municipio</th>
+                <th>Registro</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>#USR-001</td>
+                <td><strong>Roberto Gómez</strong></td>
+                <td><span class="role-badge role-todero">Todero</span></td>
+                <td>roberto.gomez@correo.com</td>
+                <td>310 456 7890</td>
+                <td>Facatativá</td>
+                <td>15/09/2026</td>
+                <td><span class="badge-tag" style="background-color: #e8f8f0; color: #27ae60;">Activo</span></td>
+                <td class="table-actions">
+                  <a href="#editar" class="btn btn-secondary btn-table-action">Editar</a>
+                  <a href="#bloquear" class="btn btn-secondary btn-table-action">Pausar</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#USR-002</td>
+                <td><strong>María Fernanda López</strong></td>
+                <td><span class="role-badge role-client">Cliente</span></td>
+                <td>maria.lopez@correo.com</td>
+                <td>315 123 4567</td>
+                <td>Facatativá</td>
+                <td>20/09/2026</td>
+                <td><span class="badge-tag" style="background-color: #e8f8f0; color: #27ae60;">Activo</span></td>
+                <td class="table-actions">
+                  <a href="#editar" class="btn btn-secondary btn-table-action">Editar</a>
+                  <a href="#bloquear" class="btn btn-secondary btn-table-action">Pausar</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#USR-003</td>
+                <td><strong>Carlos Mendoza</strong></td>
+                <td><span class="role-badge role-todero">Todero</span></td>
+                <td>carlos.mendoza@correo.com</td>
+                <td>320 987 6543</td>
+                <td>Facatativá</td>
+                <td>28/09/2026</td>
+                <td><span class="badge-tag" style="background-color: #e8f8f0; color: #27ae60;">Activo</span></td>
+                <td class="table-actions">
+                  <a href="#editar" class="btn btn-secondary btn-table-action">Editar</a>
+                  <a href="#bloquear" class="btn btn-secondary btn-table-action">Pausar</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#USR-004</td>
+                <td><strong>Andrés Camargo</strong></td>
+                <td><span class="role-badge role-client">Cliente</span></td>
+                <td>andres.camargo@correo.com</td>
+                <td>311 222 3344</td>
+                <td>Facatativá</td>
+                <td>05/10/2026</td>
+                <td><span class="badge-tag" style="background-color: #e8f8f0; color: #27ae60;">Activo</span></td>
+                <td class="table-actions">
+                  <a href="#editar" class="btn btn-secondary btn-table-action">Editar</a>
+                  <a href="#bloquear" class="btn btn-secondary btn-table-action">Pausar</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#USR-005</td>
+                <td><strong>Wilson Moreno</strong></td>
+                <td><span class="role-badge role-todero">Todero</span></td>
+                <td>wilson.moreno@correo.com</td>
+                <td>318 777 8899</td>
+                <td>Facatativá</td>
+                <td>12/10/2026</td>
+                <td><span class="badge-tag" style="background-color: #fceceb; color: #e74c3c;">Inactivo</span></td>
+                <td class="table-actions">
+                  <a href="#editar" class="btn btn-secondary btn-table-action">Editar</a>
+                  <a href="#activar" class="btn btn-primary btn-table-action">Activar</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>#USR-006</td>
+                <td><strong>Diana Católico</strong></td>
+                <td><span class="role-badge role-admin">Admin</span></td>
+                <td>diana.catolico.c@gmail.com</td>
+                <td>300 000 0000</td>
+                <td>Facatativá</td>
+                <td>01/08/2026</td>
+                <td><span class="badge-tag" style="background-color: #e8f8f0; color: #27ae60;">Activo</span></td>
+                <td class="table-actions">
+                  <a href="#editar" class="btn btn-secondary btn-table-action">Editar</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Paginación informativa -->
+        <div class="pagination-container">
+          <span>Mostrando 6 de 142 usuarios registrados</span>
+          <div class="pagination-buttons">
+            <a href="#ant" class="page-btn">&laquo; Anterior</a>
+            <a href="#p1" class="page-btn active">1</a>
+            <a href="#p2" class="page-btn">2</a>
+            <a href="#p3" class="page-btn">3</a>
+            <a href="#sig" class="page-btn">Siguiente &raquo;</a>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
   </div>
+
 </body>
 </html>

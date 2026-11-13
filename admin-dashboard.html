@@ -4,14 +4,212 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel de Administración - Toderos Facatativá</title>
-  <!-- Estilos globales compartidos -->
+  <!-- Estilos globales -->
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Estilos específicos de la pantalla -->
+  <!-- Estilos de pantalla -->
   <link rel="stylesheet" href="css/admin-dashboard.css">
 </head>
 <body>
+
+  <!-- Layout del panel administrativo (Escritorio / Responsive) -->
   <div class="admin-layout">
-    <!-- Contenido inicial de Admin Dashboard -->
+
+    <!-- Barra lateral de navegación (Sidebar) -->
+    <aside class="admin-sidebar">
+      
+      <div class="admin-sidebar-header">
+        <div class="brand-logo-box">TF</div>
+        <h2 class="brand-name" style="font-size: 17px; margin-bottom: 2px;">TODEROS APP</h2>
+        <span class="badge-tag">Panel Administrador</span>
+      </div>
+
+      <nav aria-label="Menú de administración">
+        <ul class="admin-nav-links">
+          <li><a href="admin-dashboard.html" class="active">Dashboard / Resumen</a></li>
+          <li><a href="admin-usuarios.html">Gestión de Usuarios</a></li>
+          <li><a href="#servicios">Gestión de Servicios</a></li>
+          <li><a href="#solicitudes">Gestión de Solicitudes</a></li>
+          <li><a href="#reportes">Reportes y Métricas</a></li>
+          <li><a href="#configuracion">Configuración</a></li>
+        </ul>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <p><strong>Sesión:</strong> Diana Católico</p>
+        <p style="font-size: 11px; color: var(--color-muted); margin-bottom: 8px;">Administradora del Sistema</p>
+        <p><a href="index.html">&larr; Volver a la WebApp</a></p>
+      </div>
+
+    </aside>
+
+    <!-- Contenido principal del panel -->
+    <main class="admin-content">
+
+      <!-- Barra superior del panel -->
+      <header class="admin-header-bar">
+        <div>
+          <h1 style="font-size: 22px; margin-bottom: 2px;">Dashboard General</h1>
+          <p style="margin-bottom: 0; font-size: 13px;">Monitoreo y estadísticas de la plataforma en Facatativá</p>
+        </div>
+        <div>
+          <span class="badge-tag" style="background-color: #e8f8f0; color: #27ae60; font-weight: bold;">Plataforma Operativa</span>
+        </div>
+      </header>
+
+      <!-- Indicadores clave (KPIs) -->
+      <section class="kpi-grid" aria-label="Indicadores generales">
+        
+        <div class="kpi-card">
+          <h2 class="kpi-card-title">Total Usuarios Registrados</h2>
+          <div class="kpi-card-value">142</div>
+          <p class="kpi-card-subtitle">105 Clientes | 37 Toderos</p>
+        </div>
+
+        <div class="kpi-card">
+          <h2 class="kpi-card-title">Servicios Activos</h2>
+          <div class="kpi-card-value">48</div>
+          <p class="kpi-card-subtitle">En 6 categorías de oficios</p>
+        </div>
+
+        <div class="kpi-card">
+          <h2 class="kpi-card-title">Solicitudes del Mes</h2>
+          <div class="kpi-card-value">89</div>
+          <p class="kpi-card-subtitle">+18% respecto al mes anterior</p>
+        </div>
+
+        <div class="kpi-card">
+          <h2 class="kpi-card-title">Satisfacción Promedio</h2>
+          <div class="kpi-card-value">4.8 / 5.0</div>
+          <p class="kpi-card-subtitle">96% calificaciones positivas</p>
+        </div>
+
+      </section>
+
+      <!-- Gráfico de barras construido con CSS puro -->
+      <section class="chart-section" aria-label="Demanda de servicios">
+        <h2 class="chart-title">Demanda de Servicios por Oficio en Facatativá (Mes en Curso)</h2>
+        
+        <div class="chart-bar-list">
+          
+          <div class="chart-bar-item">
+            <div class="chart-bar-label">
+              <span>Plomería y Fontanería</span>
+              <strong>45% (40 solicitudes)</strong>
+            </div>
+            <div class="chart-bar-track">
+              <div class="chart-bar-fill" style="width: 45%;"></div>
+            </div>
+          </div>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-label">
+              <span>Electricidad Residencial</span>
+              <strong>30% (27 solicitudes)</strong>
+            </div>
+            <div class="chart-bar-track">
+              <div class="chart-bar-fill" style="width: 30%;"></div>
+            </div>
+          </div>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-label">
+              <span>Pintura y Acabados</span>
+              <strong>15% (13 solicitudes)</strong>
+            </div>
+            <div class="chart-bar-track">
+              <div class="chart-bar-fill" style="width: 15%;"></div>
+            </div>
+          </div>
+
+          <div class="chart-bar-item">
+            <div class="chart-bar-label">
+              <span>Carpintería y Otros</span>
+              <strong>10% (9 solicitudes)</strong>
+            </div>
+            <div class="chart-bar-track">
+              <div class="chart-bar-fill" style="width: 10%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Actividad reciente / Últimas solicitudes -->
+      <section class="recent-activity-section" aria-label="Actividad reciente">
+        <h2 class="recent-activity-title">Últimas Solicitudes Registradas</h2>
+
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Cliente</th>
+                <th>Todero</th>
+                <th>Oficio</th>
+                <th>Barrio / Sector</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SOL-1042</td>
+                <td>María Fernanda López</td>
+                <td>Roberto Gómez</td>
+                <td>Fontanería</td>
+                <td>Santa Rita</td>
+                <td>12/11/2026</td>
+                <td><span class="status-pill status-completed">Completado</span></td>
+              </tr>
+              <tr>
+                <td>#SOL-1041</td>
+                <td>Andrés Camargo</td>
+                <td>Carlos Mendoza</td>
+                <td>Electricidad</td>
+                <td>Las Quintas</td>
+                <td>12/11/2026</td>
+                <td><span class="status-pill status-pending">En Progreso</span></td>
+              </tr>
+              <tr>
+                <td>#SOL-1040</td>
+                <td>Gloria Patricia Ruiz</td>
+                <td>Wilson Moreno</td>
+                <td>Pintura</td>
+                <td>Centro</td>
+                <td>11/11/2026</td>
+                <td><span class="status-pill status-completed">Completado</span></td>
+              </tr>
+              <tr>
+                <td>#SOL-1039</td>
+                <td>Jorge Suárez</td>
+                <td>Roberto Gómez</td>
+                <td>Fontanería</td>
+                <td>Manablanca</td>
+                <td>10/11/2026</td>
+                <td><span class="status-pill status-pending">Pendiente</span></td>
+              </tr>
+              <tr>
+                <td>#SOL-1038</td>
+                <td>Liliana Cortés</td>
+                <td>Carlos Mendoza</td>
+                <td>Electricidad</td>
+                <td>Cartagenita</td>
+                <td>09/11/2026</td>
+                <td><span class="status-pill status-cancelled">Cancelado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 15px; text-align: right;">
+          <a href="admin-usuarios.html" class="btn btn-secondary" style="font-size: 13px;">Ver Gestión de Usuarios &rarr;</a>
+        </div>
+
+      </section>
+
+    </main>
+
   </div>
+
 </body>
 </html>

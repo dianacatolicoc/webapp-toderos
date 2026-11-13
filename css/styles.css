@@ -196,3 +196,92 @@ a:hover {
   font-weight: bold;
   border-bottom: 2px solid var(--color-primary);
 }
+
+/* 10. Layout para el Panel de Administración (Escritorio / Adaptable) */
+.admin-layout {
+  display: flex;
+  min-height: 90vh;
+  max-width: var(--max-width-desktop, 1150px);
+  margin: 0 auto;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.admin-sidebar {
+  width: 230px;
+  background-color: var(--color-neutral-box);
+  border-right: 1px solid var(--color-border);
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.admin-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-nav-links a {
+  display: block;
+  padding: 8px 12px;
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.admin-nav-links a:hover,
+.admin-nav-links a.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.admin-sidebar-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 13px;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 25px;
+  background-color: #ffffff;
+  overflow-x: auto;
+}
+
+.admin-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+/* Adaptación responsive para pantallas menores */
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+  .admin-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .admin-nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
