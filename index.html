@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,57 +10,60 @@
   <!-- Estilos de pantalla -->
   <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
 
-  <!-- Contenedor principal de la pantalla móvil -->
-  <main class="mobile-view">
-    
-    <!-- Encabezado con logo y título -->
-    <header class="site-header">
-      <div class="login-brand-logo">[Logo]</div>
-      <h1 class="brand-name">TODEROS APP</h1>
-      <h2>Iniciar Sesión</h2>
-      <p>Ingresa tus datos para acceder a la plataforma</p>
-    </header>
 
-    <!-- Formulario de inicio de sesión -->
-    <form action="buscar-servicios.html" method="get" class="login-box">
-      
-      <div class="form-group">
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
-      </div>
+  <body>
 
-      <div class="form-group">
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
-      </div>
+      <!-- Contenedor principal de la pantalla móvil -->
+      <main class="mobile-view">
 
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-      </div>
+          <!-- Encabezado con logo y título -->
+          <header class="site-header">
+            <div class="brand-logo-box">TF</div>
+            <h1 class="brand-name">TODEROS APP</h1>
+            <h2>Iniciar Sesión</h2>
+            <p>Ingresa tus datos para acceder a la plataforma</p>
+          </header>
 
-      <div class="divider-simple">
-        <span>o</span>
-      </div>
+          <!-- Formulario de inicio de sesión -->
+            <form action="buscar-servicios.html" method="get" class="login-box">
 
-      <div class="form-group">
-        <a href="buscar-servicios.html" class="btn btn-secondary btn-block">Continuar con Google</a>
-      </div>
+              <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+              </div>
 
-    </form>
+              <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
+              </div>
 
-    <!-- Enlaces de navegación -->
-    <footer class="login-footer-links">
-      <p><a href="#recuperar">¿Olvidaste tu contraseña?</a></p>
-      <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
-      
-      <div class="admin-link-box">
-        <p>Acceso administrativo: <a href="admin-dashboard.html">Panel de Administración</a></p>
-      </div>
-    </footer>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+              </div>
 
-  </main>
+                <div class="divider-simple">
+                  <span>o</span>
+                </div>
 
-</body>
+                <div class="form-group">
+                  <a href="buscar-servicios.html" class="btn btn-secondary btn-block">Continuar con Google</a>
+                </div>
+
+            </form>
+
+                <!-- Enlaces de navegación -->
+                <footer class="login-footer-links">
+                  <p><a href="#recuperar">¿Olvidaste tu contraseña?</a></p>
+                  <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+
+                  <div class="admin-link-box">
+                    <p>Acceso administrativo: <a href="admin-dashboard.html">Panel de Administración</a></p>
+                  </div>
+                </footer>
+
+      </main>
+
+  </body>
+
 </html>

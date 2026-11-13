@@ -69,6 +69,20 @@ a:hover {
   margin-bottom: 15px;
 }
 
+.brand-logo-box {
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 .brand-name {
   font-size: 20px;
   font-weight: bold;

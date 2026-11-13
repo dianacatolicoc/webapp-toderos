@@ -3,19 +3,7 @@
    ========================================================================== */
 
 .login-box {
-  margin-top: 20px;
-}
-
-.login-brand-logo {
-  width: 50px;
-  height: 50px;
-  background-color: var(--color-primary);
-  color: #fff;
-  line-height: 50px;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 4px;
-  margin: 0 auto 10px auto;
+  margin-top: 15px;
 }
 
 .divider-simple {
