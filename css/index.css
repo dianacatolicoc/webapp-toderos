@@ -3,13 +3,188 @@
    Estilos específicos para la pantalla de Login
    ========================================================================== */
 
-.auth-container {
-  max-width: var(--max-width-mobile);
-  margin: 0 auto;
+/* Contenedor principal centrado, estilo mobile-first */
+.login-page {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gray-bg);
+  padding: var(--spacing-md);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: var(--max-width-mobile);
   background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  border: var(--border-light);
+  box-shadow: var(--box-shadow-md);
+  padding: var(--spacing-xl) var(--spacing-lg);
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-xl) var(--spacing-lg);
-  justify-content: space-between;
+}
+
+/* Identidad de marca superior */
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.auth-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.brand-badge-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  letter-spacing: 1px;
+}
+
+.brand-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.5px;
+}
+
+.auth-title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.auth-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+  line-height: 1.4;
+}
+
+/* Formulario */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Campo con indicador visual neutro */
+.input-with-indicator {
+  display: flex;
+  align-items: center;
+  border: var(--border-light);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-white);
+  padding: 0 var(--spacing-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-with-indicator:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(25, 74, 155, 0.15);
+}
+
+.input-indicator {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-gray);
+  text-transform: uppercase;
+  margin-right: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  border-right: 1px solid var(--color-gray-light);
+  user-select: none;
+}
+
+.input-with-indicator .form-input {
+  border: none;
+  padding: 12px 0;
+  box-shadow: none;
+}
+
+.input-with-indicator .form-input:focus {
+  box-shadow: none;
+}
+
+/* Divisor horizontal */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-gray-light);
+}
+
+.divider-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+}
+
+/* Botón social neutro */
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  background-color: var(--color-gray-box);
+  color: var(--color-dark);
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  padding: 10px 16px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.btn-social:hover {
+  background-color: #e5e5e5;
+  text-decoration: none;
+}
+
+.social-indicator {
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+}
+
+/* Enlaces del pie del formulario */
+.auth-footer {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  text-align: center;
+  font-size: var(--font-size-xs);
+}
+
+.auth-footer p {
+  color: var(--color-gray);
+}
+
+.auth-footer a {
+  font-weight: 600;
+}
+
+.admin-access-note {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px dashed var(--color-gray-light);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
 }

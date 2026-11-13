@@ -9,9 +9,92 @@
   <!-- Estilos específicos de la pantalla -->
   <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-  <main class="auth-container">
-    <!-- Contenido inicial de Inicio de Sesión -->
+<body class="login-page">
+
+  <main class="auth-card" aria-labelledby="login-title">
+    
+    <!-- Encabezado con identidad visual -->
+    <header class="auth-header">
+      <div class="auth-brand">
+        <div class="brand-badge-box" aria-hidden="true">TF</div>
+        <h1 class="brand-title">TODEROS APP</h1>
+      </div>
+      <h2 id="login-title" class="auth-title">Iniciar Sesión</h2>
+      <p class="auth-subtitle">Ingresa tus credenciales para acceder a tu cuenta en Facatativá</p>
+    </header>
+
+    <!-- Formulario de inicio de sesión -->
+    <form class="auth-form" action="buscar-servicios.html" method="get">
+      
+      <!-- Campo Correo -->
+      <div class="form-group">
+        <label for="login-email" class="form-label">Correo electrónico</label>
+        <div class="input-with-indicator">
+          <span class="input-indicator" aria-hidden="true">@</span>
+          <input 
+            type="email" 
+            id="login-email" 
+            name="email" 
+            class="form-input" 
+            placeholder="ejemplo@correo.com" 
+            required
+            autocomplete="email">
+        </div>
+      </div>
+
+      <!-- Campo Contraseña -->
+      <div class="form-group">
+        <label for="login-password" class="form-label">Contraseña</label>
+        <div class="input-with-indicator">
+          <span class="input-indicator" aria-hidden="true">**</span>
+          <input 
+            type="password" 
+            id="login-password" 
+            name="password" 
+            class="form-input" 
+            placeholder="Ingresa tu contraseña" 
+            required
+            autocomplete="current-password">
+        </div>
+      </div>
+
+      <!-- Botón de acción principal -->
+      <button type="submit" class="btn btn-primary btn-block">
+        Iniciar Sesión
+      </button>
+
+      <!-- Divisor visual -->
+      <div class="auth-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-text">o</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Botón de autenticación alternativa -->
+      <a href="buscar-servicios.html" class="btn-social">
+        <span class="social-indicator" aria-hidden="true">[G]</span>
+        <span>Continuar con Google</span>
+      </a>
+
+    </form>
+
+    <!-- Enlaces secundarios del pie -->
+    <footer class="auth-footer">
+      <p>
+        ¿Olvidaste tu <a href="#recuperar">contraseña?</a>
+      </p>
+      <p>
+        ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+      </p>
+
+      <!-- Enlace para navegación rápida hacia el rol Administrador (para fines de revisión) -->
+      <div class="admin-access-note">
+        <span>¿Eres administrador?</span> 
+        <a href="admin-dashboard.html">Ir al panel de administración</a>
+      </div>
+    </footer>
+
   </main>
+
 </body>
 </html>

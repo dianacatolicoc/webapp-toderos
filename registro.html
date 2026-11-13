@@ -9,9 +9,163 @@
   <!-- Estilos específicos de la pantalla -->
   <link rel="stylesheet" href="css/registro.css">
 </head>
-<body>
-  <main class="register-container">
-    <!-- Contenido inicial de Registro -->
+<body class="register-page">
+
+  <main class="register-card" aria-labelledby="register-title">
+    
+    <!-- Barra superior con enlace de retorno -->
+    <div class="register-top-bar">
+      <a href="index.html" class="back-link">&larr; Volver a iniciar sesión</a>
+      <span class="badge badge-role">ADSO SENA</span>
+    </div>
+
+    <!-- Encabezado con identidad de marca -->
+    <header class="register-header">
+      <div class="register-brand">
+        <div class="brand-badge-small" aria-hidden="true">TF</div>
+        <h1 class="brand-title-small">TODEROS APP</h1>
+      </div>
+      <h2 id="register-title" class="register-title">Crea una cuenta</h2>
+      <p class="register-subtitle">Ingresa tus datos para registrarte en la plataforma de servicios de Facatativá</p>
+    </header>
+
+    <!-- Formulario de Registro -->
+    <form class="register-form" action="buscar-servicios.html" method="get">
+      
+      <!-- Selector de Tipo de Usuario / Rol -->
+      <fieldset class="role-selector-group">
+        <legend class="role-selector-label">¿Cómo deseas registrarte?</legend>
+        <div class="role-options">
+          <label class="role-option">
+            <input type="radio" name="tipo_usuario" value="cliente" checked>
+            <div class="role-option-box">
+              <span class="role-option-title">Cliente</span>
+              <span class="role-option-desc">Busco servicios</span>
+            </div>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="tipo_usuario" value="todero">
+            <div class="role-option-box">
+              <span class="role-option-title">Prestador</span>
+              <span class="role-option-desc">Soy todero</span>
+            </div>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Nombre completo -->
+      <div class="form-group">
+        <label for="reg-name" class="form-label">Nombre completo</label>
+        <input 
+          type="text" 
+          id="reg-name" 
+          name="nombre" 
+          class="form-input" 
+          placeholder="Ej. Carlos Rodríguez" 
+          required 
+          autocomplete="name">
+      </div>
+
+      <!-- Fila de Teléfono y Municipio -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reg-phone" class="form-label">Teléfono celular</label>
+          <input 
+            type="tel" 
+            id="reg-phone" 
+            name="telefono" 
+            class="form-input" 
+            placeholder="300 123 4567" 
+            required 
+            autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label for="reg-city" class="form-label">Municipio</label>
+          <input 
+            type="text" 
+            id="reg-city" 
+            name="municipio" 
+            class="form-input" 
+            value="Facatativá" 
+            readonly>
+        </div>
+      </div>
+
+      <!-- Correo electrónico -->
+      <div class="form-group">
+        <label for="reg-email" class="form-label">Correo electrónico</label>
+        <input 
+          type="email" 
+          id="reg-email" 
+          name="email" 
+          class="form-input" 
+          placeholder="ejemplo@correo.com" 
+          required 
+          autocomplete="email">
+      </div>
+
+      <!-- Fila de Contraseñas -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reg-password" class="form-label">Contraseña</label>
+          <input 
+            type="password" 
+            id="reg-password" 
+            name="password" 
+            class="form-input" 
+            placeholder="Mínimo 6 caracteres" 
+            required 
+            autocomplete="new-password">
+        </div>
+        <div class="form-group">
+          <label for="reg-confirm" class="form-label">Confirmar contraseña</label>
+          <input 
+            type="password" 
+            id="reg-confirm" 
+            name="confirm_password" 
+            class="form-input" 
+            placeholder="Repite la contraseña" 
+            required 
+            autocomplete="new-password">
+        </div>
+      </div>
+
+      <!-- Aceptación de Términos -->
+      <div class="terms-group">
+        <input type="checkbox" id="reg-terms" name="terms" class="terms-checkbox" required>
+        <label for="reg-terms" class="terms-label">
+          Acepto los <a href="#terminos">Términos de servicio</a> y la <a href="#privacidad">Política de privacidad</a> de Toderos Facatativá.
+        </label>
+      </div>
+
+      <!-- Botón de Registro -->
+      <button type="submit" class="btn btn-primary btn-block">
+        Registrarse
+      </button>
+
+      <!-- Divisor -->
+      <div class="auth-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-text">o</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Registro con Google -->
+      <a href="buscar-servicios.html" class="btn-social">
+        <span class="social-indicator" aria-hidden="true">[G]</span>
+        <span>Continuar con Google</span>
+      </a>
+
+    </form>
+
+    <!-- Pie del registro con enlace de vuelta al Login -->
+    <footer class="register-footer">
+      <p>
+        ¿Ya tienes una cuenta? <a href="index.html">Inicia sesión aquí</a>
+      </p>
+    </footer>
+
   </main>
+
 </body>
 </html>
