@@ -1,11 +1,161 @@
 /* ==========================================================================
    TODEROS FACATATIVÁ - BUSCAR SERVICIOS (buscar-servicios.css)
-   Estilos específicos para la pantalla de búsqueda y catálogo de clientes
+   Vista del Cliente para explorar servicios en Facatativá
    ========================================================================== */
 
-.search-container {
-  max-width: var(--max-width-mobile);
-  margin: 0 auto;
-  min-height: 100vh;
-  background-color: var(--color-gray-bg);
+/* Barra superior con ubicación del cliente */
+.client-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.user-role-badge {
+  font-size: 11px;
+  background-color: var(--color-neutral-box);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+
+/* Buscador */
+.search-form {
+  margin-bottom: 15px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input-group input {
+  flex: 1;
+}
+
+/* Categorías rápidas en filtros sencillos */
+.category-filter-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.category-tag.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* Espacio representativo del mapa */
+.map-wireframe-box {
+  background-color: #e9ecef;
+  border: 1px dashed #999999;
+  border-radius: 4px;
+  padding: 25px 15px;
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: 20px;
+}
+
+.map-wireframe-box strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* Listado de tarjetas de servicios */
+.services-section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.service-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.service-item-card {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 12px;
+}
+
+.service-card-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.avatar-neutral {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-neutral-box);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--color-muted);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.service-card-info h3 {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.service-todero-name {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-bottom: 2px;
+}
+
+.service-location {
+  font-size: 12px;
+  color: #555555;
+}
+
+.service-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eeeeee;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+
+.service-price {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.service-rating {
+  font-size: 12px;
+  color: #555555;
 }
